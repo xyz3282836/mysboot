@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 @Component
 public class TestAspect {
 
-    private static Logger logger = LoggerFactory.getLogger(UserController.class);
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Pointcut("execution(public * com.rz.controller.UserController.*(..))")
     private void logpoint(){

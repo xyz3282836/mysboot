@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class AppExceptionHandle {
 
-    private static Logger logger = LoggerFactory.getLogger(AppExceptionHandle.class);
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @ExceptionHandler(Exception.class)
     public Result handle(Exception e){
